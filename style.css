@@ -1,0 +1,93 @@
+/* General Page Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    /* Red, Black, and Blue Gradient Background */
+    background: linear-gradient(135deg, #1a1a1a 0%, #7b0000 50%, #001f3f 100%);
+    color: white;
+}
+
+.game-container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8); /* Darker background for contrast */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+    width: 350px;
+}
+
+.mode-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.mode-selection button {
+    font-size: 1.1rem;
+    padding: 15px;
+}
+
+/* The Grid */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 15px; /* Spacing between squares */
+    margin: 20px auto;
+}
+
+/* The Individual Squares */
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #222; /* Dark black/grey cells */
+    border: 2px solid #444;
+    
+    /* Smoothing the corners */
+    border-radius: 15px; 
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Hover effect for interaction */
+.cell:hover {
+    background-color: #333;
+    transform: scale(1.05);
+    border-color: #ff4d4d; /* Subtle red glow on hover */
+}
+
+/* Status text and Button */
+#status {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    background: #7b0000; /* Dark Red button */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #001f3f; /* Changes to Blue on hover */
+}
