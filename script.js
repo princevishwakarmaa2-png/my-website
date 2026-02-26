@@ -68,6 +68,10 @@ function makeMove(cell, index) {
 }
 
 function triggerCelebration() {
+    if (typeof confetti !== 'function') {
+        return;
+    }
+
     const duration = 5 * 1000;
     const animationEnd = Date.now() + duration;
     const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
